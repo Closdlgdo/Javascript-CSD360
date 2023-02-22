@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Module 5</title>
+    </head>
+    <h1>Module 5 Assignment</h1>
+
+    <body>
+        <script type="text/javascript">
+            function rollDice() {
+                document.form1.dice1.value = Math.floor((Math.random() * 6) + 1);
+                document.form1.dice2.value = Math.floor((Math.random() * 6) + 1);
+                document.form1.total.value = parseInt(document.form1.dice1.value) +
+                    parseInt(document.form1.dice2.value);
+                var total = parseInt(document.form1.dice1.value) +
+                    parseInt(document.form1.dice2.value);
+                switch (total) { 
+                    case 2: 
+                        window.alert("Snake eyes");
+                        break;
+
+                    case 12:
+                        window.alert("Box Cars");
+                        break;
+
+                    case 7:
+                        window.alert("You Win");
+                        break;
+
+                    case 11:
+                        window.alert("You Win");
+                        break;
+
+                }
+            }
+        </script>
+        <form name='form1'>
+            <table border='1'>
+                <tr>
+                    <td> Dice 1 </td>
+                    <td> <input type='text' name='dice1' /> </td>
+                    <td> Dice 2 </td>
+                    <td> <input type='text' name='dice2' /> </td>
+                    <td> <input type='button' name='button1' onclick='rollDice()' value=' Roll Dice ' /> </td>
+                    <td> Total </td>
+                    <td> <input type='text' name='total' /> </td>
+                </tr>
+            </table>
+            <input type='button' name='button5' value='Reset' onclick='reset()' />
+        </form>
+
+    </body>
+
+</html>

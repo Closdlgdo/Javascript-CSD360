@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <h1>Module 8 Assignment</h1>
+        <script>
+            // creating table tag with attributes
+            document.write('<table border="2" cellspacing="0" cellpadding="10">');
+            // creating th tag
+            document.write("<tr><th>Initial value</th><th>Square Root</th>");
+            // creating th tag
+            document.write("<th>Power of 2</th><th>Power of 3</th></tr>");
+            // iterate from i is equal to 4 and i is less than or equal to 14 and increment i by 1
+            for (let i = 4; i <= 14; i++) {
+                // create tr tag
+                document.write("<tr>");
+                document.write(`<td>${i}</td>`);
+                // create td tag with the value of sqrt of i with fixed precision
+                document.write(`<td>${Math.sqrt(i).toFixed(2)}</td>`);
+                // create td tag with the value of power of 2 for i
+                document.write(`<td>${Math.pow(i, 2)}</td>`);
+                // create td tag with the value of power of 3 for i
+                document.write(`<td>${Math.pow(i, 3)}</td>`);
+                // create end tr tag
+                document.write("</tr>");
+            }
+            // create end table tag
+            document.write("<table/>");
+        </script>
+    </body>
+
+</html>

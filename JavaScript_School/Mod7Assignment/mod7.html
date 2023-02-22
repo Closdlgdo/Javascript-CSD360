@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Module 7
+    </title>
+
+    <style>
+        span{
+            position: relative;
+            left: -12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Module 7</h1>
+
+    <p>Looping over the array using for loop</p>
+
+    <p id="demo"></p>
+
+    <script>
+        var sports_Teams, text, i;
+        sports_Teams = ["Dodgers", "Lakers", "Real Madrid", "LAFC", "LA Galaxy", "Juventus", "Bayern Munich", "LA Kings", "Manchester United", "PSG"];
+
+        text = "<ul>";
+
+        for (i = 0; i < 10; i++) {
+            text += "<li>" + sports_Teams[i] + "</li>";
+        }
+
+        for (i = 9; i >= 0; i--) {
+            text += "<li>" + sports_Teams[i] + "</li>";
+        }
+
+        text += "</ul>";
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+</body>
+
+</html>
